@@ -1,6 +1,6 @@
 <footer>
     <div id="flex-div">
-        <p>© 2025 - Manifesto</p>
+        <p>© 2026 - Manifesto</p>
     </div>
 </footer>
 

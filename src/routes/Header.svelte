@@ -3,15 +3,18 @@
 	import Menu from "./Menu.svelte";
 
 	let tabs = [
-		{ name: 'Apps', url: '/' },
-		{ name: 'Docs', url: 'https://documentation.manifesto-app.fr/' },
+		{ name: 'Templates', url: '/templates' },
+		{ name: 'Code gen', url: '/codegen' },
+		{ name: 'Formation', url: '/formation' },
+		{ name: 'UX Design', url: '/ux' },
 	];
 
 </script>
 
 
 <header>
-	<div>
+	<div class="logo">
+		<a href="/"><img src="logo.svg" alt="Manifesto"></a>
 	</div>
 
 	<nav>
@@ -45,8 +48,7 @@
 	}
 
 	.logo img {
-		margin-left: 3vw;
-		height: 3.2em;
+		height: 2em;
 		object-fit: contain;
 	}
 

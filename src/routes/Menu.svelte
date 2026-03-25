@@ -90,7 +90,7 @@
 
     .line {
         fill: none;
-        stroke: var(--color-bg-1);
+        stroke: var(--color-theme-1);
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 3;

@@ -14,7 +14,6 @@
 </svelte:head>
 
 <script>
-    import List from "./List.svelte";
     import { fly, slide } from 'svelte/transition';
     import {quadInOut} from "svelte/easing";
     import {onMount} from 'svelte';
@@ -40,7 +39,7 @@
         <div class="M" >
             {#each bars as bar, i}
                 <img class="M-bars" src={bar} alt="M"
-                     transition:fly|global={{ y: 100, delay: BAR_STAGGER_DELAY_MS * i, duration: 1000, easing: quadInOut }}
+                     in:fly|global={{ y: 100, delay: BAR_STAGGER_DELAY_MS * i, duration: 1000, easing: quadInOut }}
                 >
             {/each}
         </div>
@@ -52,7 +51,7 @@
 </div>
 
 {#if showText}
-    <List />
+    <div></div>
 {/if}
 
 <style>
