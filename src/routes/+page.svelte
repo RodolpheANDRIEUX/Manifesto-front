@@ -84,6 +84,91 @@
 <section class="how-it-works" in:fade={{ duration: 600, delay: 400 }}>
     <h2 class="section-title">Comment ça marche ?</h2>
 
+    <!-- PIPELINE SCHEMA -->
+    <div class="pipeline">
+
+        <div class="pipeline-phase" style="--clr: var(--color-theme-2)">
+            <div class="phase-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+            </div>
+            <span class="phase-label">Conception</span>
+        </div>
+
+        <div class="pipeline-connector">
+            <div class="connector-track">
+                <div class="track-line"></div>
+                <div class="artifact-bubble">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9z"/>
+                    </svg>
+                    <span>Cahier des charges</span>
+                </div>
+                <div class="track-line"></div>
+            </div>
+            <div class="connector-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="pipeline-phase" style="--clr: var(--color-theme-1)">
+            <div class="phase-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25z"/>
+                </svg>
+            </div>
+            <span class="phase-label">Code</span>
+        </div>
+
+        <div class="pipeline-connector">
+            <div class="connector-track">
+                <div class="track-line"></div>
+                <div class="artifact-bubble">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/>
+                    </svg>
+                    <span>Repo GitHub</span>
+                </div>
+                <div class="track-line"></div>
+            </div>
+            <div class="connector-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="pipeline-phase" style="--clr: var(--color-theme-3)">
+            <div class="phase-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75z"/>
+                </svg>
+            </div>
+            <span class="phase-label">Déploiement</span>
+        </div>
+
+        <div class="pipeline-connector pipeline-connector--short">
+            <div class="connector-track">
+                <div class="track-line"></div>
+            </div>
+            <div class="connector-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="pipeline-result">
+            <div class="result-dot"></div>
+            <span>En ligne</span>
+        </div>
+
+    </div>
+
+    <!-- STEPS -->
     <div class="steps">
         <div class="step">
             <h3 class="step-title">Développer une idée</h3>
@@ -214,7 +299,7 @@
         padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 8vw, 10%);
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 3.5rem;
     }
 
     .section-title {
@@ -227,6 +312,170 @@
         margin: 0;
     }
 
+    /* PIPELINE */
+    .pipeline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 2.5rem 1rem;
+        border: 1px solid rgba(244, 241, 237, 0.06);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.015);
+    }
+
+    .pipeline-phase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        flex-shrink: 0;
+    }
+
+    .phase-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        border: 1px solid color-mix(in srgb, var(--clr) 40%, transparent);
+        background: color-mix(in srgb, var(--clr) 8%, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--clr);
+        transition: box-shadow 0.3s;
+    }
+
+    .phase-icon:hover {
+        box-shadow: 0 0 20px color-mix(in srgb, var(--clr) 25%, transparent);
+    }
+
+    .phase-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .phase-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.5;
+        white-space: nowrap;
+    }
+
+    /* CONNECTOR */
+    .pipeline-connector {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        padding-bottom: 1.4rem; /* offset for label below icon */
+    }
+
+    .connector-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .track-line {
+        width: 36px;
+        height: 1px;
+        background: rgba(244, 241, 237, 0.12);
+    }
+
+    .artifact-bubble {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        border: 1px solid rgba(244, 241, 237, 0.14);
+        border-radius: 20px;
+        padding: 0.3rem 0.7rem;
+        background: rgba(255, 255, 255, 0.04);
+        white-space: nowrap;
+    }
+
+    .artifact-bubble svg {
+        width: 13px;
+        height: 13px;
+        opacity: 0.55;
+        flex-shrink: 0;
+    }
+
+    .artifact-bubble span {
+        font-size: 0.65rem;
+        opacity: 0.45;
+        letter-spacing: 0.03em;
+    }
+
+    .connector-arrow {
+        width: 18px;
+        height: 18px;
+        color: rgba(244, 241, 237, 0.2);
+        flex-shrink: 0;
+    }
+
+    .connector-arrow svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pipeline-connector--short .connector-track {
+        flex-direction: row;
+    }
+
+    .pipeline-connector--short .track-line {
+        width: 36px;
+        height: 1px;
+    }
+
+    /* RESULT */
+    .pipeline-result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        flex-shrink: 0;
+        padding-bottom: 1.4rem;
+    }
+
+    .result-dot {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        border: 1px solid color-mix(in srgb, var(--color-theme-1) 40%, transparent);
+        background: color-mix(in srgb, var(--color-theme-1) 12%, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .result-dot::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--color-theme-1);
+        box-shadow: 0 0 12px var(--color-theme-1);
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    .pipeline-result span {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.5;
+        white-space: nowrap;
+    }
+
+    /* STEPS */
     .steps {
         display: flex;
         flex-direction: column;
@@ -267,5 +516,14 @@
         .logo-text { display: none; }
 
         .step-title { width: min(80%, 480px); }
+
+        .pipeline {
+            justify-content: flex-start;
+            padding: 1.5rem 0.75rem;
+        }
+
+        .track-line { width: 20px; }
+
+        .connector-arrow { width: 14px; height: 14px; }
     }
 </style>
