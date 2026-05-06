@@ -11,6 +11,7 @@
 </svelte:head>
 
 <script>
+    import { enhance } from '$app/forms';
     import { fly, slide, fade } from 'svelte/transition';
     import { quadInOut, quintOut } from 'svelte/easing';
     import { onMount } from 'svelte';
@@ -76,7 +77,7 @@
 
 <h1>Manifesto</h1>
 
-<form method="POST">
+<form method="POST" use:enhance>
     <input name="email" type="email" placeholder="email@example.com" />
     <button type="submit">Tester le serveur</button>
 </form>
