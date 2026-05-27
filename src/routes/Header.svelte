@@ -3,10 +3,11 @@
 	import Menu from "./Menu.svelte";
 
 	let tabs = [
-		{ name: 'Templates', url: '/templates' },
-		{ name: 'Code gen', url: '/codegen' },
-		{ name: 'Formation', url: '/formation' },
-		{ name: 'UX Design', url: '/ux' },
+		{ name: 'Accueil',    url: '/' },
+		{ name: 'Concevoir',  url: '/ux' },
+		{ name: 'Construire', url: '/templates' },
+		{ name: 'Déployer',   url: '/deploy' },
+		{ name: 'Formation',  url: '/formation' },
 	];
 
 </script>
