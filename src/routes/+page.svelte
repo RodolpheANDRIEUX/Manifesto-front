@@ -77,11 +77,6 @@
 
 <h1>Manifesto</h1>
 
-<form method="POST" use:enhance>
-    <input name="email" type="email" placeholder="email@example.com" />
-    <button type="submit">Tester le serveur</button>
-</form>
-
 <!-- ═══ HERO ═══ -->
 <section class="hero">
     <div class="hero-left">
