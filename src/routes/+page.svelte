@@ -451,7 +451,7 @@
         transition: opacity 0.8s ease 0.2s;
     }
 
-    .pitch.visible { opacity: 0.6; }
+    .pitch.visible { opacity: 0.78; }
 
     .hero-right {
         display: flex;
@@ -482,11 +482,11 @@
 
     .cta-content { display: flex; flex-direction: column; gap: 0.15rem; }
     .cta-label   { font-size: 0.9rem; font-weight: 500; }
-    .cta-desc    { font-size: 0.7rem; opacity: 0.4; }
+    .cta-desc    { font-size: 0.7rem; opacity: 0.6; }
 
     .cta-icon {
         color: var(--color-theme-1);
-        opacity: 0.6;
+        opacity: 0.75;
         transition: opacity 0.2s, transform 0.2s;
         flex-shrink: 0;
     }
@@ -504,13 +504,14 @@
     }
 
     .section-title {
-        font-size: clamp(1rem, 1.6vw, 1.4rem);
+        font-size: clamp(1.2rem, 2vw, 1.6rem);
         font-weight: 400;
-        border: 1px solid rgba(244,241,237,0.2);
-        border-radius: 6px;
-        padding: 0.75rem 1.5rem;
-        align-self: center;
+        letter-spacing: -0.01em;
         margin: 0;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(244,241,237,0.15);
+        align-self: stretch;
+        opacity: 0.85;
     }
 
     /* ══════════════════════════════════
@@ -524,9 +525,9 @@
         align-items: center;
         justify-items: center;
         row-gap: 0.6rem;
-        border: 1px solid rgba(244,241,237,0.07);
+        border: 1px solid rgba(244,241,237,0.12);
         border-radius: 20px;
-        background: rgba(255,255,255,0.015);
+        background: rgba(255,255,255,0.025);
         padding: 2rem 3.5rem;
         overflow-x: auto;
     }
@@ -536,13 +537,13 @@
         display: flex;
         align-items: center;
         gap: 0.4rem;
-        border: 1px solid rgba(244,241,237,0.14);
+        border: 1px solid rgba(244,241,237,0.2);
         border-radius: 20px;
         padding: 0.35rem 0.9rem;
-        background: rgba(255,255,255,0.04);
+        background: rgba(255,255,255,0.05);
         font-size: 0.7rem;
         letter-spacing: 0.04em;
-        opacity: 0.75;
+        opacity: 0.85;
         white-space: nowrap;
         /* petit trait vertical vers la ligne du rail */
         position: relative;
@@ -562,7 +563,7 @@
     .pipe-artifact svg {
         width: 13px;
         height: 13px;
-        opacity: 0.55;
+        opacity: 0.7;
         flex-shrink: 0;
     }
 
@@ -599,7 +600,7 @@
         font-size: 0.68rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        opacity: 0.4;
+        opacity: 0.65;
         white-space: nowrap;
     }
 
@@ -617,13 +618,13 @@
     .pipe-line {
         flex: 1;
         height: 1px;
-        background: rgba(244,241,237,0.12);
+        background: rgba(244,241,237,0.2);
     }
 
     .pipe-arrow {
         width: 18px;
         height: 18px;
-        color: rgba(244,241,237,0.2);
+        color: rgba(244,241,237,0.35);
         flex-shrink: 0;
     }
 
@@ -665,7 +666,7 @@
         font-size: 0.68rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        opacity: 0.4;
+        opacity: 0.65;
         white-space: nowrap;
     }
 
@@ -687,7 +688,7 @@
     .step-number {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 700;
-        color: color-mix(in srgb, var(--clr) 30%, transparent);
+        color: color-mix(in srgb, var(--clr) 50%, transparent);
         line-height: 1;
         flex-shrink: 0;
         letter-spacing: -0.04em;
@@ -709,7 +710,7 @@
 
     .step-subtitle {
         font-size: clamp(0.85rem, 1.2vw, 1rem);
-        opacity: 0.45;
+        opacity: 0.65;
         margin: 0;
         max-width: 52ch;
         line-height: 1.5;
@@ -761,7 +762,7 @@
 
     .feature-desc {
         font-size: 0.78rem;
-        opacity: 0.4;
+        opacity: 0.62;
         line-height: 1.4;
     }
 
@@ -801,7 +802,7 @@
 
     .mock-title-bar {
         font-size: 0.72rem;
-        opacity: 0.35;
+        opacity: 0.55;
         letter-spacing: 0.04em;
         flex: 1;
     }
@@ -863,7 +864,7 @@
     .story-id {
         font-size: 0.6rem;
         font-family: var(--font-mono);
-        opacity: 0.35;
+        opacity: 0.55;
         flex-shrink: 0;
         letter-spacing: 0.05em;
     }
@@ -900,7 +901,7 @@
     .term-cmd    { color: var(--color-text); }
     .term-ok     { color: var(--color-theme-1); }
     .term-hl     { color: var(--color-theme-3); }
-    .term-dim    { opacity: 0.3; }
+    .term-dim    { opacity: 0.5; }
     .term-cursor { color: var(--color-theme-1); animation: blink 1s step-end infinite; margin: 0; }
 
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
@@ -915,13 +916,13 @@
     }
 
     .stack-tile {
-        border: 1px solid rgba(244,241,237,0.1);
+        border: 1px solid rgba(244,241,237,0.15);
         border-radius: 8px;
         padding: 0.5rem 0.4rem;
         font-size: 0.72rem;
         text-align: center;
-        opacity: 0.6;
-        background: rgba(255,255,255,0.02);
+        opacity: 0.75;
+        background: rgba(255,255,255,0.03);
         transition: border-color 0.2s, opacity 0.2s;
         cursor: default;
     }
@@ -941,13 +942,13 @@
     }
 
     .deploy-tile {
-        border: 1px solid rgba(244,241,237,0.1);
+        border: 1px solid rgba(244,241,237,0.15);
         border-radius: 10px;
         padding: 0.75rem 0.6rem;
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
-        background: rgba(255,255,255,0.02);
+        background: rgba(255,255,255,0.03);
         transition: border-color 0.2s, background 0.2s;
         cursor: default;
     }
@@ -958,7 +959,7 @@
     }
 
     .deploy-name { font-size: 0.82rem; font-weight: 500; }
-    .deploy-tag  { font-size: 0.62rem; opacity: 0.35; letter-spacing: 0.05em; }
+    .deploy-tag  { font-size: 0.62rem; opacity: 0.58; letter-spacing: 0.05em; }
 
     /* deploy mock specifics */
     .deploy-status-badge {
@@ -996,19 +997,19 @@
         opacity: 0.85;
     }
 
-    .deploy-arrow { opacity: 0.4; font-size: 0.72rem; }
+    .deploy-arrow { opacity: 0.6; font-size: 0.72rem; }
 
     .deploy-stats {
         display: flex;
         gap: 1.5rem;
         margin-top: 0.8rem;
         padding-top: 0.8rem;
-        border-top: 1px solid rgba(244,241,237,0.07);
+        border-top: 1px solid rgba(244,241,237,0.12);
     }
 
     .stat { display: flex; flex-direction: column; gap: 0.1rem; }
     .stat-val { font-size: 0.9rem; font-weight: 600; color: var(--color-theme-1); }
-    .stat-key { font-size: 0.58rem; opacity: 0.35; letter-spacing: 0.07em; text-transform: uppercase; }
+    .stat-key { font-size: 0.58rem; opacity: 0.58; letter-spacing: 0.07em; text-transform: uppercase; }
 
     /* ══════════════════════════════════
        RESPONSIVE
